@@ -3,12 +3,13 @@ from main.models import Section, Material, Test, Answer
 from main.serliazers import SectionSerializer, MaterialSerializer, TestSerializer, AnswerSerializer
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
+from main.paginators import BasePaginator
 
 
 class SectionList(generics.ListAPIView):
     queryset = Section.objects.all()
     serializer_class = SectionSerializer
-
+    pagination_class = BasePaginator
 
 
 class SectionDetail(generics.RetrieveAPIView):
@@ -19,6 +20,7 @@ class SectionDetail(generics.RetrieveAPIView):
 class MaterialList(generics.ListAPIView):
     queryset = Material.objects.all()
     serializer_class = MaterialSerializer
+    pagination_class = BasePaginator
 
 
 class MaterialDetail(generics.RetrieveAPIView):
@@ -29,6 +31,7 @@ class MaterialDetail(generics.RetrieveAPIView):
 class TestList(generics.ListAPIView):
     queryset = Test.objects.all()
     serializer_class = TestSerializer
+    pagination_class = BasePaginator
 
 
 class TestDetail(generics.RetrieveAPIView):
