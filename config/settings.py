@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'main',
     'users',
     'rest_framework',
+    'drf_yasg',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+
+CORS_ALLOWED_ORIGINS = [
+    'http://read-only.exemple.com',
+    'http://read-write.exemple.com',
+    ]
+
+CORS_TRUSTED_ORIGINS = [
+    'read-write.exemple.com',
+]

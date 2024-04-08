@@ -5,10 +5,18 @@ from rest_framework.response import Response
 
 
 class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint пользователя
+    """
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
     def create(self, request):
+        """
+        Создание пользователя
+        :param request:
+        :return:
+        """
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)

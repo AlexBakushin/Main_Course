@@ -5,6 +5,9 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class Section(models.Model):
+    """
+    Модель раздела
+    """
     title = models.CharField(max_length=255, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
 
@@ -17,6 +20,9 @@ class Section(models.Model):
 
 
 class Material(models.Model):
+    """
+    Модель материала
+    """
     title = models.CharField(max_length=255, verbose_name='Название')
     content = models.TextField(verbose_name='Содержание')
     section = models.ForeignKey(Section, on_delete=models.CASCADE, verbose_name='Раздел')
@@ -30,6 +36,9 @@ class Material(models.Model):
 
 
 class Test(models.Model):
+    """
+    Модель теста
+    """
     material = models.ForeignKey(Material, on_delete=models.CASCADE, verbose_name='Материал')
     question = models.CharField(max_length=255, verbose_name='Вопрос')
     correct_answer = models.CharField(max_length=255, verbose_name='Правильный ответ')
@@ -43,6 +52,9 @@ class Test(models.Model):
 
 
 class Answer(models.Model):
+    """
+    Модель ответа
+    """
     test = models.ForeignKey(Test, on_delete=models.CASCADE, verbose_name='Тест', **NULLABLE)
     user = models.ForeignKey('users.User', on_delete=models.CASCADE, verbose_name='Пользователь', **NULLABLE)
     answer = models.CharField(max_length=255, verbose_name='Ответ')
