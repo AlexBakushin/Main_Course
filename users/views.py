@@ -2,6 +2,8 @@ from users.models import User
 from rest_framework import viewsets, status
 from users.serliazers import UserSerializer
 from rest_framework.response import Response
+from users.permissions import IsOwner
+from rest_framework.permissions import IsAuthenticated
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -10,6 +12,23 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     serializer_class = UserSerializer
     queryset = User.objects.all()
+
+    def get_permissions(self):
+        """
+        Ограничения режимами доступа
+        """
+        if self.action == 'create':
+            self.permission_classes = []
+        elif self.action == 'list':
+            self.permission_classes = [IsAuthenticated]
+        elif self.action == 'retrieve':
+            self.permission_classes = [IsAuthenticated]
+        elif self.action == 'update':
+            self.permission_classes = [IsOwner]
+        elif self.action == 'destroy':
+            self.permission_classes = [IsOwner]
+
+        return [permission() for permission in self.permission_classes]
 
     def create(self, request):
         """

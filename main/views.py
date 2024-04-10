@@ -6,6 +6,14 @@ from rest_framework.permissions import IsAuthenticated
 from main.paginators import BasePaginator
 
 
+class SectionCreate(generics.CreateAPIView):
+    """
+    API endpoint создания раздела
+    """
+    serializer_class = SectionSerializer
+    permission_classes = [IsAuthenticated]
+
+
 class SectionList(generics.ListAPIView):
     """
     API endpoint списка разделов
@@ -13,6 +21,7 @@ class SectionList(generics.ListAPIView):
     queryset = Section.objects.all()
     serializer_class = SectionSerializer
     pagination_class = BasePaginator
+    permission_classes = [IsAuthenticated]
 
 
 class SectionDetail(generics.RetrieveAPIView):
@@ -21,6 +30,15 @@ class SectionDetail(generics.RetrieveAPIView):
     """
     queryset = Section.objects.all()
     serializer_class = SectionSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class MaterialCreate(generics.CreateAPIView):
+    """
+    API endpoint создания материала
+    """
+    serializer_class = MaterialSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class MaterialList(generics.ListAPIView):
@@ -30,6 +48,7 @@ class MaterialList(generics.ListAPIView):
     queryset = Material.objects.all()
     serializer_class = MaterialSerializer
     pagination_class = BasePaginator
+    permission_classes = [IsAuthenticated]
 
 
 class MaterialDetail(generics.RetrieveAPIView):
@@ -38,6 +57,15 @@ class MaterialDetail(generics.RetrieveAPIView):
     """
     queryset = Material.objects.all()
     serializer_class = MaterialSerializer
+    permission_classes = [IsAuthenticated]
+
+
+class TestCreate(generics.CreateAPIView):
+    """
+    API endpoint создания теста
+    """
+    serializer_class = TestSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class TestList(generics.ListAPIView):
@@ -47,6 +75,7 @@ class TestList(generics.ListAPIView):
     queryset = Test.objects.all()
     serializer_class = TestSerializer
     pagination_class = BasePaginator
+    permission_classes = [IsAuthenticated]
 
 
 class TestDetail(generics.RetrieveAPIView):
@@ -55,6 +84,7 @@ class TestDetail(generics.RetrieveAPIView):
     """
     queryset = Test.objects.all()
     serializer_class = TestSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class AnswerCreate(generics.CreateAPIView):

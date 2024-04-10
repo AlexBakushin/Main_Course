@@ -1,0 +1,288 @@
+[
+  {
+    "model": "main.section",
+    "pk": 2,
+    "fields": {
+      "title": "������",
+      "description": "������ ������ � ���������"
+    }
+  },
+  {
+    "model": "main.section",
+    "pk": 3,
+    "fields": {
+      "title": "������",
+      "description": "������ ������ � ���������"
+    }
+  },
+  {
+    "model": "main.material",
+    "pk": 2,
+    "fields": {
+      "title": "�������",
+      "content": "��� ����� ��������� �������",
+      "section": 2
+    }
+  },
+  {
+    "model": "main.material",
+    "pk": 3,
+    "fields": {
+      "title": "���������",
+      "content": "������� �����������  ���������",
+      "section": 2
+    }
+  },
+  {
+    "model": "main.material",
+    "pk": 4,
+    "fields": {
+      "title": "����������",
+      "content": "������� ����������� ����������",
+      "section": 3
+    }
+  },
+  {
+    "model": "main.material",
+    "pk": 5,
+    "fields": {
+      "title": "�����",
+      "content": "������� ��� �����",
+      "section": 3
+    }
+  },
+  {
+    "model": "main.material",
+    "pk": 6,
+    "fields": {
+      "title": "�����",
+      "content": "������� ��� �����",
+      "section": 3
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 2,
+    "fields": {
+      "material": 2,
+      "question": "����� ���� �������� ������� �������?",
+      "correct_answer": "1905"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 3,
+    "fields": {
+      "material": 2,
+      "question": "����� ������ ������ �������� ������������� ���?",
+      "correct_answer": "�������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 4,
+    "fields": {
+      "material": 2,
+      "question": "����� ������ ������ �� ����� ������� ����������� ���������?",
+      "correct_answer": "������� XVI"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 5,
+    "fields": {
+      "material": 2,
+      "question": "��� ��� ������ ����������� ���?",
+      "correct_answer": "������ ���������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 6,
+    "fields": {
+      "material": 2,
+      "question": "����� ��� ��������� ������� ������ ������� �����?",
+      "correct_answer": "1914"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 7,
+    "fields": {
+      "material": 3,
+      "question": "����� ���� �������� ����� ������� � ����?",
+      "correct_answer": "��������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 8,
+    "fields": {
+      "material": 3,
+      "question": "��� ���������� ����� ������� ���� � ����?",
+      "correct_answer": "�������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 9,
+    "fields": {
+      "material": 3,
+      "question": "� ����� ������ ��������� ���������� �����������?",
+      "correct_answer": "������������� �����"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 10,
+    "fields": {
+      "material": 3,
+      "question": "����� ������ �������� ����� ���������� � ����?",
+      "correct_answer": "�����"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 11,
+    "fields": {
+      "material": 3,
+      "question": "������� ��������� �� �����?",
+      "correct_answer": "6"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 12,
+    "fields": {
+      "material": 4,
+      "question": "��� ������� ����� \"������������ � ���������\"?",
+      "correct_answer": "Ը��� ���������� �����������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 13,
+    "fields": {
+      "material": 4,
+      "question": "����� �������� ������� ������������ \"����� ������\"?",
+      "correct_answer": "����� �������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 14,
+    "fields": {
+      "material": 4,
+      "question": "��� ����� ������ ������ \"����� � ������ �����\"?",
+      "correct_answer": "����� �������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 15,
+    "fields": {
+      "material": 4,
+      "question": "����� �������� �������� ������� \"����� � ����\"?",
+      "correct_answer": "��� ���������� �������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 16,
+    "fields": {
+      "material": 4,
+      "question": "��� ����� �������� ����� ������ \"������ � ���������\"?",
+      "correct_answer": "������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 17,
+    "fields": {
+      "material": 5,
+      "question": "��� ���������� ����� ������� ����� ������������� ����?",
+      "correct_answer": "����"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 18,
+    "fields": {
+      "material": 5,
+      "question": "��� ���� ������� ���������������?",
+      "correct_answer": "����������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 19,
+    "fields": {
+      "material": 5,
+      "question": "��� ���������� ����� ���������� �������?",
+      "correct_answer": "������ ����� �������������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 20,
+    "fields": {
+      "material": 5,
+      "question": "����� ���������� ������� �������� ����� ������?",
+      "correct_answer": "��������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 21,
+    "fields": {
+      "material": 5,
+      "question": "��� ���������� ����� � �������� � �������?",
+      "correct_answer": "����������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 22,
+    "fields": {
+      "material": 6,
+      "question": "����� ������� ����� ��������� ���� �� ������� � 2018 ����?",
+      "correct_answer": "������� �������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 23,
+    "fields": {
+      "material": 6,
+      "question": "��� ���������� ���������� ������������ ������������ � ����������� \"������\"?",
+      "correct_answer": "������ ������ ������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 24,
+    "fields": {
+      "material": 6,
+      "question": "� ����� ���� ��������� ����������� ���� � ������?",
+      "correct_answer": "2022"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 25,
+    "fields": {
+      "material": 6,
+      "question": "����� ��� ������ �������� � ���� ���������� \"������\"?",
+      "correct_answer": "������ ��������"
+    }
+  },
+  {
+    "model": "main.test",
+    "pk": 26,
+    "fields": {
+      "material": 6,
+      "question": "����� ����� �������� ������� ����������� ���������� ������� ������?",
+      "correct_answer": "�������"
+    }
+  }
+]
